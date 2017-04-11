@@ -72,6 +72,7 @@ def print_stats(major = None):
             print "Overall Courses Stats:"
         else:
             print "Major Courses Stats:"
+            print "Your selected majors are:", list(major)
         print "#course:", count
         print "GPA:", total_GPA/ count
         print "************************************************************"

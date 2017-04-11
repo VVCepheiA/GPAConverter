@@ -1,7 +1,22 @@
 GPAConverter
 ========
-A python tool to convert Waterloo transcript to US GPA.
+A python tool to convert Waterloo transcript to US GPA, including major GPA and overall GPA.
 
+Requirements
+--------------
+2.6 <= Python version <= 3.0
+
+How to Setup
+--------------
+ * Setup for pdfminer
+ * Run `setup.py`:
+    $ cd lib
+    $ python setup.py install
+
+How to Run
+--------------
+Download your unofficial Waterloo transcript into transcripts folder, specify your major in `magic_gpa.py`, and run it!
+    $ python magic_gpa.py
 
 Acknowledgement
 --------
