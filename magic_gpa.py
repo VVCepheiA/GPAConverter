@@ -22,7 +22,7 @@ def to_gpa(grade):
     elif grade >= 67:
         return 2.3
     else:
-        raise "Too lazy to type on... Just try not to get here :)"
+        raise Exception("Too lazy to type on... Just try not to get here :)")
 
 def remove_tmp_file(tmp_file):
     try:
@@ -47,8 +47,8 @@ def print_stats(major = None):
             line = line.split()
             try:
                 mark = int(line[-3])
-                # ignore the header or work term report
-                if mark > 100 or line[0] == "WKRPT":
+                # ignore the header or work term report or PD
+                if mark > 100 or line[0] == "WKRPT" or line[0] == "PD":
                     continue
                 # ignore the non major if calculating major GPA
                 ignore = "IGNORED" if (major is not None and line[0] not in major) else "COUNTED"
@@ -62,7 +62,8 @@ def print_stats(major = None):
                     total_GPA += to_gpa(mark) * 0.5
                     count += 0.5
                 else:
-                    raise "Unexpected credit, check the code bro"
+                    print "Error in reading", line
+                    raise Exception("Unexpected credit, check the code bro")
             except (ValueError, IndexError) as e:
                 # naturally drop the DRNA
                 pass
