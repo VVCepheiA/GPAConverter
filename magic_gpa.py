@@ -47,8 +47,8 @@ def print_stats(major = None):
             line = line.split()
             try:
                 mark = int(line[-3])
-                # ignore the header
-                if mark > 100:
+                # ignore the header or work term report
+                if mark > 100 or line[0] == "WKRPT":
                     continue
                 # ignore the non major if calculating major GPA
                 ignore = "IGNORED" if (major is not None and line[0] not in major) else "COUNTED"
