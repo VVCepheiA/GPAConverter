@@ -9,14 +9,20 @@ Requirements
 How to Setup
 --------------
  * Setup for pdfminer, go to the lib folder
+ ```
     $ cd lib
+ ```
  * Run `setup.py`:
+ ```
     $ python setup.py install
+ ```
 
 How to Run
 --------------
 Download your unofficial Waterloo transcript into transcripts folder, specify your major in `magic_gpa.py`, and run it!
+```
     $ python magic_gpa.py
+```
 
 Acknowledgement
 --------
