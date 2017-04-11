@@ -8,9 +8,9 @@ Requirements
 
 How to Setup
 --------------
- * Setup for pdfminer
- * Run `setup.py`:
+ * Setup for pdfminer, go to the lib folder
     $ cd lib
+ * Run `setup.py`:
     $ python setup.py install
 
 How to Run
