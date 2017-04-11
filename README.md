@@ -19,7 +19,8 @@ How to Setup
 
 How to Run
 --------------
-Download your unofficial Waterloo transcript into `transcripts` folder, specify your major in `magic_gpa.py`, and run it!
+Download your unofficial Waterloo transcript as `Quest.pdf` into `transcripts` folder.
+Specify your major in `magic_gpa.py`, and run it!
 ```
     $ python magic_gpa.py
 ```
